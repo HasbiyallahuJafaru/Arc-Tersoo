@@ -55,7 +55,7 @@ async function createTribute(data) {
   var photos = (data.photoAssets || []).map(function(a) { return { _type: 'image', asset: { _type: 'reference', _ref: a._id } }; });
   var body = { mutations: [{ create: {
     _type: c.docType, name: data.name, email: data.email || '', relationship: data.relationship,
-    message: data.message, photos: photos, submittedAt: data.submittedAt, approved: false
+    message: data.message, photos: photos, submittedAt: data.submittedAt, approved: true
   }}]};
 
   var ctrl = new AbortController();
