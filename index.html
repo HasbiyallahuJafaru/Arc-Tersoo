@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="In loving memory of Tersoo Macikpah. Share your tributes, memories, and messages.">
+  <title>In Loving Memory — Tersoo Macikpah</title>
+
+  <!-- Display: Playfair Display | Body: Lora | UI: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ================================================================== -->
+  <!-- NAV                                                                 -->
+  <!-- ================================================================== -->
+  <nav class="c-nav" id="nav" role="navigation" aria-label="Main">
+    <div class="c-nav__inner">
+      <span class="c-nav__brand">In Memoriam</span>
+      <a href="#share" class="c-nav__cta">Share a Tribute</a>
+    </div>
+  </nav>
+
+  <!-- ================================================================== -->
+  <!-- HERO — editorial type + photo                                      -->
+  <!-- ================================================================== -->
+  <header class="c-hero" id="hero">
+    <div class="c-hero__grid">
+      <!-- Text -->
+      <div class="c-hero__text">
+        <p class="c-hero__kicker">In Loving Memory</p>
+        <h1 class="c-hero__name">Tersoo <em>Macikpah</em></h1>
+        <p class="c-hero__dates">1985 — 2026</p>
+        <div class="c-hero__rule" aria-hidden="true"></div>
+        <p class="c-hero__quote">
+          A life beautifully lived leaves its light behind — guiding us, warming us, never truly gone.
+        </p>
+        <a href="#share" class="c-hero__action">
+          Share your tribute
+          <span class="c-hero__arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <!-- Photo -->
+      <div class="c-hero__photo-wrap">
+        <div class="c-hero__photo-back" aria-hidden="true"></div>
+        <div class="c-hero__photo" id="hero-photo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScvNo-HbF2puOlplypFGx96r-HDiDp2j6VAF4XoBFK-7vn5-Z3qCkuOHQ0&s=10"
+            alt="Portrait of Tersoo Macikpah"
+            width="500" height="625"
+            loading="eager"
+            crossorigin="anonymous"
+            onerror="this.style.display='none';document.getElementById('hero-photo').classList.add('c-hero__photo--empty')"
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="c-hero__scroll" aria-hidden="true">
+      <div class="c-hero__scroll-line"></div>
+      <span class="c-hero__scroll-label">Scroll</span>
+    </div>
+  </header>
+
+  <!-- ================================================================== -->
+  <!-- REMEMBRANCE                                                         -->
+  <!-- ================================================================== -->
+  <section class="c-remembrance" id="remembrance">
+    <div class="o-container">
+      <div class="c-remembrance__grid">
+
+        <!-- Visual side — photo -->
+        <div class="c-remembrance__visual">
+          <div class="c-remembrance__frame" id="remembrance-photo">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScvNo-HbF2puOlplypFGx96r-HDiDp2j6VAF4XoBFK-7vn5-Z3qCkuOHQ0&s=10"
+              alt="Portrait of Tersoo Macikpah"
+              width="400" height="533"
+              loading="lazy"
+              crossorigin="anonymous"
+              onerror="this.style.display='none';document.getElementById('remembrance-photo').classList.add('c-remembrance__frame--empty')"
+            >
+          </div>
+          <p class="c-remembrance__caption">Forever in our hearts</p>
+        </div>
+
+        <!-- Text side -->
+        <div class="c-remembrance__text">
+          <p class="c-section-eyebrow">Tersoo Macikpah's Tribute</p>
+          <h2 class="c-section-title">In loving memory of<br>a life beautifully lived</h2>
+
+          <p class="c-remembrance__lead">
+            This page honors <strong>Tersoo Macikpah</strong> — a devoted family member,
+            loyal friend, and pillar of the community — who touched countless lives with
+            warmth, kindness, and an unwavering spirit.
+          </p>
+
+          <div class="c-remembrance__body">
+            <p>
+              We invite everyone whose life was touched by Tersoo to share a tribute
+              or condolence message below. Your words will be kept as part of the
+              family's record — a lasting testament to the love and impact they had
+              on all of us.
+            </p>
+            <p>
+              We thank you for standing with us in this difficult time and sharing
+              in our grief. Every message, every memory, every prayer means more
+              than words can express.
+            </p>
+          </div>
+
+          <div class="c-remembrance__count">
+            <span class="c-remembrance__count-num" id="tribute-count-num">—</span>
+            <span class="c-remembrance__count-label">tributes &amp; condolences received</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <!-- TRIBUTE FORM — guest book style                                     -->
+  <!-- ================================================================== -->
+  <section class="c-form-section" id="share">
+    <div class="o-container o-container--narrow">
+      <div class="c-form-section__header">
+        <p class="c-section-eyebrow">Send Your Tribute</p>
+        <h2 class="c-section-title">Share a message for<br>the family's record</h2>
+        <p class="c-form-section__sub">
+          Please fill the form below to send your tribute and condolence message.
+          Your words will be treasured by the family.
+        </p>
+      </div>
+
+      <form class="c-form" id="tribute-form" novalidate>
+
+        <!-- Name -->
+        <div class="c-field">
+          <label for="name" class="c-field__label">
+            Your full name <span class="c-field__required" aria-label="required">*</span>
+          </label>
+          <input
+            type="text" id="name" name="name"
+            class="c-input"
+            placeholder="Enter your full name"
+            required autocomplete="name" minlength="2" maxlength="100"
+          >
+          <span class="c-field__error" id="name-error" role="alert"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="c-field">
+          <label for="email" class="c-field__label">
+            Email address <span class="c-field__hint">— private; only if the family wishes to reach you</span>
+          </label>
+          <input
+            type="email" id="email" name="email"
+            class="c-input"
+            placeholder="you@email.com"
+            autocomplete="email" maxlength="254"
+          >
+          <span class="c-field__error" id="email-error" role="alert"></span>
+        </div>
+
+        <!-- Relationship -->
+        <div class="c-field">
+          <label for="relationship" class="c-field__label">
+            How did you know Tersoo? <span class="c-field__required" aria-label="required">*</span>
+          </label>
+          <select id="relationship" name="relationship" class="c-input c-select" required>
+            <option value="" disabled selected>Select your relationship…</option>
+            <option value="Family">Family</option>
+            <option value="Close Friend">Close Friend</option>
+            <option value="Friend">Friend</option>
+            <option value="Colleague">Colleague</option>
+            <option value="Neighbor">Neighbor</option>
+            <option value="Classmate">Classmate</option>
+            <option value="Teacher / Mentor">Teacher / Mentor</option>
+            <option value="Community Member">Community Member</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="c-field__error" id="relationship-error" role="alert"></span>
+        </div>
+
+        <!-- Message -->
+        <div class="c-field">
+          <label for="message" class="c-field__label">
+            Your tribute or condolence message <span class="c-field__required" aria-label="required">*</span>
+          </label>
+          <textarea
+            id="message" name="message"
+            class="c-input c-textarea"
+            rows="5"
+            placeholder="Share a memory, a message of love, or words of comfort for the family…"
+            required minlength="10" maxlength="5000"
+          ></textarea>
+          <div class="c-field__footer">
+            <span class="c-field__error" id="message-error" role="alert"></span>
+            <span class="c-field__count" id="message-count">0 / 5000</span>
+          </div>
+        </div>
+
+        <!-- Photo upload — multi-image -->
+        <div class="c-field c-field--last">
+          <label class="c-field__label">
+            Attach photos <span class="c-field__hint">— memories with Tersoo, if you have any</span>
+          </label>
+          <div class="c-upload__wrap">
+            <div class="c-upload" id="upload-zone" role="button" tabindex="0" aria-label="Upload photos">
+              <input type="file" id="photo" name="photos" class="c-upload__input"
+                     accept="image/jpeg,image/png,image/webp,image/heic"
+                     multiple aria-hidden="true">
+              <div class="c-upload__content" id="upload-content">
+                <div class="c-upload__icon" aria-hidden="true">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+                    <path d="M22 12l-5-5-7 7-3-3-5 5"/>
+                  </svg>
+                </div>
+                <p class="c-upload__title"><strong>Click to upload</strong> or drag and drop</p>
+                <p class="c-upload__hint">JPG, PNG, WebP, or HEIC &middot; max 10MB each</p>
+              </div>
+              <div class="c-upload__preview-grid" id="upload-preview-grid" hidden>
+                <!-- Thumbnails injected by JS -->
+              </div>
+            </div>
+          </div>
+          <span class="c-field__error" id="photo-error" role="alert"></span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="c-submit" id="submit-btn">
+          <span class="c-submit__label">Submit your tribute</span>
+          <span class="c-submit__spinner" hidden>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32">
+                <animate attributeName="stroke-dashoffset" values="32;0" dur="1.5s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+            Submitting…
+          </span>
+        </button>
+
+      </form>
+
+      <!-- Success (outside form — not hidden when form hides) -->
+      <div class="c-form-success" id="form-success" hidden>
+        <div class="c-form-success__icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/>
+          </svg>
+        </div>
+        <h3>Thank you for your tribute</h3>
+        <p>Your message has been received and will be kept in the family's record. It may take a moment to appear below.</p>
+        <button type="button" class="c-form-success__again" id="btn-another">Send another tribute</button>
+      </div>
+
+      <!-- Error (outside form — not hidden when form hides) -->
+      <div class="c-form-error" id="form-error" hidden>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span id="form-error-msg">Something went wrong. Please try again.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <!-- TRIBUTES WALL                                                       -->
+  <!-- ================================================================== -->
+  <section class="c-tributes" id="tributes">
+    <div class="o-container">
+      <div class="c-tributes__header">
+        <p class="c-section-eyebrow">Tributes &amp; Condolences</p>
+        <h2 class="c-section-title">Messages of love<br>from those who knew them</h2>
+        <p class="c-tributes__sub">A lasting record of the lives Tersoo touched</p>
+      </div>
+
+      <div class="c-tributes-grid" id="tributes-grid">
+        <!-- Populated by JavaScript -->
+      </div>
+
+      <!-- Loading -->
+      <div class="c-tributes-loader" id="tributes-loader">
+        <svg class="c-tributes-loader__spin" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32">
+            <animate attributeName="stroke-dashoffset" values="32;0" dur="1.5s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <p>Loading tributes…</p>
+      </div>
+
+      <!-- Empty -->
+      <div class="c-tributes-empty" id="tributes-empty" hidden>
+        <div class="c-tributes-empty__icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+          </svg>
+        </div>
+        <h3>No tributes yet</h3>
+        <p>Be the first to share a message for the family's record.</p>
+        <a href="#share" class="c-tributes-empty__link">Send your tribute →</a>
+      </div>
+
+      <!-- Load more -->
+      <div class="c-tributes-more" id="tributes-more" hidden>
+        <button class="c-load-more" id="btn-load-more">Load more tributes</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <!-- FOOTER                                                              -->
+  <!-- ================================================================== -->
+  <footer class="c-footer">
+    <div class="o-container o-container--narrow">
+      <div class="c-footer__ornament" aria-hidden="true"></div>
+      <p class="c-footer__text">Tersoo Macikpah</p>
+      <p class="c-footer__verse">Rest in peace. Forever in our hearts.</p>
+      <p class="c-footer__note">
+        Thank you for standing with the family in this difficult time. Tributes are stored securely.
+        Your email, if provided, is kept private and will never be shared.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/sanity.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
