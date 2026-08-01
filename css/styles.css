@@ -627,11 +627,12 @@ body::before{
    RESPONSIVE FINESSE
    -------------------------------------------------------------------------- */
 @media(max-width:599px){
-  .c-hero{padding:calc(var(--nav-h) + var(--space-2xl)) var(--space-lg) var(--space-2xl)}
-  .c-hero__text{text-align:center;margin-inline:auto}
-  .c-hero__action{margin-inline:auto}
-  .c-hero__photo-back{display:none}
+  .c-hero{justify-content:center;padding:calc(var(--nav-h) + var(--space-2xl)) var(--space-lg) var(--space-2xl)}
+  .c-hero__grid{place-items:center;text-align:center}
+  .c-hero__text{max-width:100%;display:flex;flex-direction:column;align-items:center}
+  .c-hero__quote{margin-inline:auto}
   .c-hero__rule{margin-inline:auto}
+  .c-hero__photo-back{display:none}
 
   /* Remembrance: text on top of image on mobile */
   .c-remembrance__grid{display:flex;flex-direction:column}
