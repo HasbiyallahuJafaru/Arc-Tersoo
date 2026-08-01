@@ -181,11 +181,14 @@ async function addFiles(fileList) {
   if (remaining <= 0) { showErr('photo', 'Maximum ' + CONFIG.maxPhotos + ' photos.'); return; }
 
   var toAdd = Array.from(fileList).slice(0, remaining);
-  var allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/heic'];
+  var allowed = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
+  var allowedExt = ['.jpg', '.jpeg', '.png', '.webp', '.heic', '.heif'];
 
   for (var i = 0; i < toAdd.length; i++) {
     var file = toAdd[i];
-    if (!allowed.includes(file.type)) { showErr('photo', '"' + file.name + '" is not a supported format.'); continue; }
+    var ext = file.name.toLowerCase().slice(file.name.lastIndexOf('.'));
+    // ponytail: check both MIME and extension — mobile browsers often send empty/unknown MIME
+    if (!allowed.includes(file.type) && !allowedExt.includes(ext)) { showErr('photo', '"' + file.name + '" is not a supported format.'); continue; }
     if (file.size > CONFIG.maxPhotoBytes) { showErr('photo', '"' + file.name + '" is over 10MB.'); continue; }
 
     var id = nextId();

@@ -27,6 +27,13 @@ function isConfigured() { var c = cfg(); return !!(c.projectId && c.token); }
    ASSET UPLOAD
    -------------------------------------------------------------------------- */
 
+// ponytail: guess MIME from extension when browser gives empty file.type (common on mobile)
+function mimeFromName(name) {
+  var ext = name.toLowerCase().slice(name.lastIndexOf('.'));
+  var map = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.heic': 'image/heic', '.heif': 'image/heif' };
+  return map[ext] || 'image/jpeg';
+}
+
 async function uploadAsset(file) {
   var c = cfg();
   var url = base() + '/assets/images/' + c.dataset;
@@ -36,7 +43,7 @@ async function uploadAsset(file) {
   try {
     var res = await fetch(url, {
       method: 'POST',
-      headers: Object.assign({}, auth(), { 'Content-Type': file.type || 'image/jpeg', Accept: 'application/json' }),
+      headers: Object.assign({}, auth(), { 'Content-Type': file.type || mimeFromName(file.name), Accept: 'application/json' }),
       body: file,
       signal: ctrl.signal,
     });
