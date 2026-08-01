@@ -628,7 +628,16 @@ body::before{
    -------------------------------------------------------------------------- */
 @media(max-width:599px){
   .c-hero{padding:calc(var(--nav-h) + var(--space-2xl)) var(--space-lg) var(--space-2xl)}
+  .c-hero__text{text-align:center;margin-inline:auto}
+  .c-hero__action{margin-inline:auto}
   .c-hero__photo-back{display:none}
+  .c-hero__rule{margin-inline:auto}
+
+  /* Remembrance: text on top of image on mobile */
+  .c-remembrance__grid{display:flex;flex-direction:column}
+  .c-remembrance__visual{order:2}
+  .c-remembrance__text{order:1}
+
   .c-form{padding:var(--space-xl) var(--space-lg)}
   .c-upload{padding:var(--space-xl) var(--space-lg)}
 
