@@ -443,7 +443,7 @@ async function loadTributes(reset) {
   }
 }
 
-function loadMore() { renderTributes(false); }
+function loadMore() { loadTributes(false); }
 
 /* --------------------------------------------------------------------------
    SMOOTH ANCHORS
